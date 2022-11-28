@@ -1,0 +1,35 @@
+paths:
+    migrations: '%%PHINX_CONFIG_DIR%%/config/Migrations'
+    seeds: '%%PHINX_CONFIG_DIR%%/config/Seeds'
+
+environments:
+    default_migration_table: phinxlog
+    default_environment: development
+    production:
+        adapter: mysql
+        host: db
+        name: cake-blog-tutorial
+        user: root
+        pass: 'password'
+        port: 3306
+        charset: utf8
+
+    development:
+        adapter: mysql
+        host: db
+        name: cake-blog-tutorial
+        user: root
+        pass: 'password'
+        port: 3306
+        charset: utf8
+
+    testing:
+        adapter: mysql
+        host: db
+        name: cake-blog-tutorial
+        user: root
+        pass: 'password'
+        port: 3306
+        charset: utf8
+
+version_order: creation
