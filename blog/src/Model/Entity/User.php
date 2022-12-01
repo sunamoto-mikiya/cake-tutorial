@@ -30,7 +30,7 @@ class User extends Entity
      */
     protected $_accessible = [
         '*' => true, //id以外一括で代入できる
-        'id' => falsel
+        'id' => false
         // 'email' => true,
         // 'password' => true,
         // 'role' => true,
@@ -40,9 +40,8 @@ class User extends Entity
 
     protected function _setPassword($password)
     {
-        if (strlen($password)) {
-            $defaultPassWordHasher = new DefaultPasswordHasher();
-            return $defaultPassWordHasher->hash($password);
+        if (strlen($password) > 0) {
+            return (new DefaultPasswordHasher)->hash($password);
         }
     }
 
