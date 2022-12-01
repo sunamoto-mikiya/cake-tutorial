@@ -9,7 +9,7 @@
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->html->link('login', ['controller' => 'Users', 'action' => 'login']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">

@@ -1,5 +1,6 @@
 <h1>Blog Articles</h1>
-<?= $this->html->link('Add Article', ['action' => 'add']) ?>
+<?= $this->html->link('Add Article<br/>', ['action' => 'add'], ['escape' => false]) ?>
+<?= $this->html->link('logout', ['controller' => 'Users', 'action' => 'add']) ?>
 <table>
     <tr>
         <th>Id</th>
